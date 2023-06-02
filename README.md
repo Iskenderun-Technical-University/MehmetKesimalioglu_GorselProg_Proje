@@ -1,66 +1,58 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/uelKf0-p)
-# Kütüphane Otomasyonu Projesi
-Bu proje C# programlama dili ve veritabanı yönetim sistemi olarak MySQL kullanılarak geliştirilmiş bir kütüphane otomasyonu sistemidir. Bu sistem, kütüphane yöneticileri tarafından kullanılarak kitapları, yazarları, yayınevlerini ve kullanıcıları yönetmelerine olanak sağlar.
 
-# Proje Hazırlanış Adımları
+# Kütüphane Yönetim Sistemi
 
-## Gerekli yazılım ve araçlar:
+Bu bir kütüphane yönetim sistemi uygulamasıdır. Bu uygulama, bir kütüphanenin envanterini yönetmek için kullanılır. Kullanıcılar kitap ekleyebilir, kitap bilgilerini güncelleyebilir, kitapları silip envanteri temizleyebilir ve kitap durumunu değiştirebilir.
 
-- Visual Studio 2019 veya daha yeni bir sürümü
+## Özellikler
 
-- MySQL veritabanı yönetim sistemi
+- Kitap ekleme: Kullanıcılar yeni kitaplar ekleyebilir ve kitap bilgilerini girebilir.
+- Kitap güncelleme: Kullanıcılar mevcut kitapların bilgilerini güncelleyebilir.
+- Kitap silme: Kullanıcılar envanterden kitapları silebilir.
+- Envanter temizleme: Kullanıcılar tüm envanteri temizleyebilir.
+- Kitap durumu değiştirme: Kullanıcılar kitapların durumunu "Mevcut" veya "Verildi" olarak değiştirebilir.
 
-- MySQL Connector/NET veritabanı bağlantı aracı
+### Uygulama Ekran Görüntüsü
+![Uygulama Ekran Görüntüsü](https://i.imgur.com/QKyxczd.png)
 
-# Kullanım:
 
-- Proje Visual Studio'da açılmalıdır.
+## Gereksinimler
 
-- Veritabanı bağlantısı yapılmalıdır:
+- Python 3.x
+- sqlite3 modülü
+- tkinter modülü
 
-- App.config dosyası açılmalıdır.
+## Kurulum
 
-- ConnectionStrings etiketi altındaki connectionString özelliği değiştirilmelidir. 
+1. Depoyu bilgisayarınıza indirin veya klonlayın.
+2. Terminali açın ve depo klasörüne gidin.
+3. `  ```shell
+  python KutuphaneYonetim.py
+` komutunu çalıştırarak uygulamayı başlatın.
 
-Örneğin:
-```
-<add name="KutuphaneContext" connectionString="server=localhost;
-port=3306;
-database=kutuphane;
-uid=root;
-password=123456" 
-providerName="MySql.Data.MySqlClient"/>
+## Kullanım
 
-```
-# Proje Adımları:
+- Kullanıcı arayüzünde, yeni kitap bilgilerini girebileceğiniz bir form bulunmaktadır. Kitap ekle düğmesine basarak yeni bir kitap ekleyebilirsiniz.
+- Tablodaki kitapların üzerine tıklayarak kitap bilgilerini güncelleyebilirsiniz.
+- Tablodaki kitapları seçerek sil düğmesine basarak kitapları envanterden silebilirsiniz.
+- Tüm envanteri temizlemek için "Tüm envanteri sil" düğmesini kullanabilirsiniz.
+- Kitap durumunu değiştirmek için tablodaki kitapları seçin ve "Kitap Durumunu Değiştir" düğmesini kullanın.
 
-1.Gerekli araçların Yüklenmesi: Projenin geliştirilmesi için Visual Studio IDE ve .NET Framework SDK'nın yüklü olması gerekmektedir. Bu araçlar, proje dosyalarının oluşturulması, kodlama işlemlerinin gerçekleştirilmesi ve projenin derlenmesi için kullanılacaktır.
+### Veritabanı Görüntüsü
+![Veritabanı Görüntüsü](https://i.imgur.com/1aNYFcT.png)
 
-2.Proje tasarımı için gereksinimlerin Belirlenmesi: Bu adımda, proje için gerekli özellikleri ve işlevleri belirleyin. Hangi sınıfların oluşturulacağı, hangi veritabanı işlemlerinin gerçekleştirileceği ve kullanıcı arayüzü tasarımı gibi detaylar belirlenecektir.
-
-3.Veritabanı tasarımı: Projenin gerekli veritabanı tabloları oluşturulmalıdır. Bu tablolar, kitaplar, yazarlar, yayınevleri ve kullanıcılar gibi kütüphane öğelerini temsil etmelidir. Ayrıca, veritabanı tablolarının ilişkileri de belirlenmelidir.
-
-4.Projenin temel kodun: Veritabanı bağlantısını ve temel işlevleri içeren sınıfları oluşturulacaktır. "KutuphaneContext" sınıfı, veritabanı işlemlerinin gerçekleştirileceği ana sınıftır.
-
-5.Sınıfların detaylı kodları: Kitaplar, yazarlar, yayınevleri ve kullanıcılar gibi sınıfların kodlarını ayrıntılı olarak yazılacaktır. Bu kodlar, sınıfların özelliklerini ve işlevlerini içermelidir.
-
-6.Kullanıcı arayüzünün tasarlanması: Kullanıcıların kütüphane sistemine erişebilmeleri için bir kullanıcı arayüzü tasarlanmalıdır. Bu arayüzde, kullanıcılar kitapları arayabilir, kitapları ödünç alabilir ve kütüphane öğelerini yönetebilirler.
-
-7.Kodun test edilmesi: Kodun doğru şekilde çalıştığından emin olmak için proje test edilecektir. Veritabanı işlemlerinin doğru şekilde gerçekleştirildiğinden emin olduktan sonra  kullanıcı arayüzü işlevleri doğru şekilde çalışıyor mu kontrol edilmelidir.
 
 # UML Diyagramı:
+
 Aşağıda proje için hazırlanmış UML diyagramı yer almaktadır:
 
-![](http://www.plantuml.com/plantuml/png/bLB1QiCm3BtdAtGl-G4pGaDtAMMdd7PqOsyJK-pYo6FTsByFr2fEQ63hgTLxydjFZsn7jedpG5LFTXpXa3cVtcpmknZOVp9yLm00cmEoFP5D1XwFdUS7cPiBzso_R9fnCa_S6OF_89-mq09XSrNEH3PWZtDrnPhgfxec4yT5dBqpW85dIElGmCW9m-iisc9FtHTWn_6zTPuBLCjB0_9pGVIb0VrNmicQXhirRLqNpzOjijMbqlqk4lcUCGOjTb9MBnLVpQ-Wtd-dnrItcap0drTiEdn9NY7T6p0yeO5ZZFI_73UVNLqt8FGw9HMlKzh5AbjEhKIzY9MvA6nzS7cWNm00)
+![](https://www.plantuml.com/plantuml/png/xLHDRnCn4Btlhx1wAYofXBZbL4028Muqz6fDTgV1Md-4yNYXhVWdIFm6xhsbFupr9egcyKQHk73X44L-RyP-dlVMbv61E3bRDHPYL1yt3xnvM7y1Z-g-KchM1E-nuK1p5RzQm_ZgukqMCi6F1OdY4tPSPsRPwJPHScckhfYCN-r04uqxX5e9tC8TK57M0V7Jmhf7GgypSVvCuXtS6hP0Hgz2PAJCzi6qcGCBVgGOdRcpABaTf7ii6xURQkmi7g2jEEOGJxv1EzKHZPKW-Xuy8nN4TeAwnPM9R6XF_QXsZbqZ6OOb-CVVesFrASVgeuxL-1sRn7W-C0FDz4AjWS35kLgajKKXgmdE6IxLlF_yOPiR2e67jcuo2DT0CWibsWgiI8GWH2W4Mcjjl66jvI1x_9-Lgs3V4JXKz__M5eith6-oahdAWcIoObhAPEMiMOIfoy3ZhytFoFiRYGC-BShj_sQYfJEdPotalRRJwjwKwcJhWd1d4HCELSpTHSPwWzzERpITJYbGFl9dBy_Kyzai_ykdv5XD_i2huIUnVQnAGbfKic92bLp8gd4OrINwDZdx1m00)
 
-
-Bu diyagramda, proje için gerekli olan sınıflar ve aralarındaki ilişkiler gösterilmiştir. KutuphaneContext sınıfı, MySQL veritabanı bağlantısını yönetmek için kullanılmaktadır. Kitap, Yazar, Yayinevi ve Kullanici sınıfları, kütüphane sistemine dahil olan temel veri nesnelerini temsil etmektedir. Bu sınıflar arasındaki ilişkiler ise kitapların yazarlara, yayınevlerine ve kullanıcılara ait olabileceğini göstermektedir.
 
 # Hazırlayan:
 
-Mehmet KESİMALİOĞLU
+Mehmet KESİMALİOĞLU / Bilgisayar Mühendisliği / 202503211
 
-202503211
 
 
 
